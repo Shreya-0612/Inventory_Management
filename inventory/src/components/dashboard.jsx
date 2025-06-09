@@ -13,7 +13,6 @@ const Dashboard = () => {
     inventory_manager: [
       { to: "/dashboard/add-inventory", text: "Add Inventory" },
       { to: "/dashboard/view-product", text: "View Inventory" },
-      { to: "/dashboard/delete-inventory", text: "Delete Inventory"},
       ],
     warehouse_staff: [
       { to: "/dashboard/view-product", text: "View Inventory" },

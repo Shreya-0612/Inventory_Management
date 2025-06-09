@@ -120,8 +120,8 @@ const ManageInventory = () => {
 
     return (
         <div className="max-w-2xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden m-6">
-            <div className="bg-gray-50 py-4 px-6 border-b">
-                <h2 className="text-2xl font-bold text-gray-800">Manage Inventory</h2>
+            <div className="bg-gray-800 py-4 px-6 border-b">
+                <h2 className="text-2xl font-bold text-white">Manage Inventory</h2>
             </div>
             <div className="p-6">
                 {loading && <div className="text-blue-500 text-center mb-6 py-2 bg-blue-50 rounded-md"><span className="font-medium">Loading...</span></div>}
@@ -150,11 +150,11 @@ const ManageInventory = () => {
                         {standardFields.map(renderField)}
                     </div>
                     <div className="pt-4 border-t">
-                        <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition duration-200 font-medium text-lg" disabled={loading}>
+                        <button type="submit" className="w-full bg-gray-700 text-white p-3 rounded-md hover:bg-gray-800 transition duration-200 font-medium text-lg" disabled={loading}>
                             {loading ? 'Updating Inventory...' : 'Update Inventory'}
                         </button>
                         <div className="mt-4 text-center">
-                            <button type="button" className="text-blue-600 hover:text-blue-800 font-medium" onClick={() => navigate('/dashboard/view-product')}>Back to Inventories</button>
+                            <button type="button" className="text-gray-700 hover:text-gray-800 font-medium" onClick={() => navigate('/dashboard/view-product')}>Back to Inventories</button>
                         </div>
                     </div>
                 </form>

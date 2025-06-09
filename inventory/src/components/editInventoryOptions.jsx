@@ -21,12 +21,12 @@ const EditOptions = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto bg-white shadow-xl rounded-lg overflow-hidden m-6 p-6">
+        <div className="max-w-md mx-auto bg-gray-200 shadow-xl rounded-lg overflow-hidden m-6 p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Edit Options</h2>
             <div className="flex space-x-2">
                 {roleButtonAccess.includes("update") && (
                     <button 
-                        className="bg-blue-600 text-white rounded-lg p-2 font-bold"
+                        className="bg-gray-700 text-white rounded-lg p-2 font-bold"
                         onClick={handleUpdateProduct}
                     >
                         Update Product
@@ -34,7 +34,7 @@ const EditOptions = () => {
                 )}
                 {roleButtonAccess.includes("manage") && (
                     <button 
-                        className="bg-green-600 text-white rounded-lg p-2 font-bold"
+                        className="bg-gray-700 text-white rounded-lg p-2 font-bold"
                         onClick={handleManageInventory}
                     >
                         Manage Inventory

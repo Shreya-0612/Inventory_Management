@@ -57,10 +57,10 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-tr from-violet-900 to-violet-300 flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
             <div className="w-full max-w-md bg-white rounded-lg shadow-xl overflow-hidden">
-                <div className="bg-gray-50 py-4 px-6 border-b">
-                    <h2 className="text-2xl font-bold text-gray-800">Login</h2>
+                <div className="bg-gray-800 py-4 px-6 border-b">
+                    <h2 className="text-2xl font-bold text-white">Login</h2>
                 </div>
                 
                 <div className="p-6">
@@ -102,7 +102,7 @@ const Login = () => {
                         
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition font-medium text-lg"
+                            className="w-full bg-gray-700 text-white p-3 rounded hover:bg-gray-800 transition font-medium text-lg"
                             disabled={loading}
                         >
                             {loading ? 'Logging in...' : 'Login'}

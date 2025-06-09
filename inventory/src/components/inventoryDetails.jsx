@@ -13,7 +13,7 @@ const InventoryDetails = () => {
     }
 
     return (
-        <div className="max-w-2xl mx-auto m-10 p-6 bg-slate-500 rounded-lg shadow-lg">
+        <div className="max-w-2xl mx-auto m-10 p-6 bg-gray-800 rounded-lg shadow-lg">
             <h1 className="text-3xl font-bold mb-4 text-white text-center">{inventory.name}</h1>
             <div className="flex flex-col items-center mb-4">
                 <img 

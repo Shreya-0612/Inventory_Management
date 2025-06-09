@@ -109,7 +109,7 @@ const AddUser = () => {
         
         return (
             <div className="mb-6 text-[16px]" key={id}>
-                <label htmlFor={id} className="block mb-2 text-gray-700">{label}</label>
+                <label htmlFor={id} className="block mb-2 text-gray-800">{label}</label>
                 
                 {type === "select" ? (
                     <select
@@ -117,7 +117,7 @@ const AddUser = () => {
                         name={name}
                         value={formData[name] || ""}
                         onChange={handleChange}
-                        className={`border ${hasError ? 'border-red-500' : 'border-gray-300'} p-3 w-full rounded-md focus:ring-2 focus:ring-blue-500`}
+                        className={`border ${hasError ? 'border-red-500' : 'border-gray-300'} p-3 w-full rounded-md focus:ring-2 focus:ring-gray-500`}
                         disabled={loading}
                     >
                         <option value="">Select {label.replace(':', '')}</option>
@@ -148,8 +148,8 @@ const AddUser = () => {
     return (
     
         <div className="max-w-2xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden m-6">
-            <div className="bg-gray-50 py-4 px-6 border-b">
-                <h2 className="font-bold text-gray-800">Add New User</h2>
+            <div className="bg-gray-800 py-4 px-6 border-b">
+                <h2 className="font-bold text-white">Add New User</h2>
             </div>
             
             <div className="p-6">
@@ -191,7 +191,7 @@ const AddUser = () => {
                     <div className="pt-4 border-t">
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition duration-200"
+                            className="w-full bg-gray-700 text-white p-3 rounded-md hover:bg-gray-800 transition duration-200"
                             disabled={loading}
                         >
                             {loading ? 'Adding User...' : 'Add User'}
@@ -200,7 +200,7 @@ const AddUser = () => {
                         <div className="mt-4 text-center">
                             <button 
                                 type="button" 
-                                className="text-blue-600 hover:text-blue-800"
+                                className="text-gray-700 hover:text-gray-800"
                                 onClick={() => navigate('/dashboard')}
                             >
                                 Back to Dashboard

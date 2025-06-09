@@ -208,8 +208,8 @@ const UpdateProduct = () => {
 
     return (
         <div className="max-w-2xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden m-6">
-            <div className="bg-gray-50 py-4 px-6 border-b">
-                <h2 className="text-2xl font-bold text-gray-800">Update Product</h2>
+            <div className="bg-gray-800 py-4 px-6 border-b">
+                <h2 className="text-2xl font-bold text-white">Update Product</h2>
             </div>
             <div className="p-6">
                 {loading && <div className="text-blue-500 text-center mb-6 py-2 bg-blue-50 rounded-md"><span className="font-medium">Loading...</span></div>}
@@ -219,7 +219,7 @@ const UpdateProduct = () => {
                     <div className="mb-6 bg-gray-50 p-4 rounded-md border border-gray-100">
                         <div className="flex justify-between items-center mb-3">
                             <label htmlFor="category_id" className="text-gray-700 font-medium text-lg">Category</label>
-                            <button type="button" className="px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors" onClick={toggleCategory}>
+                            <button type="button" className="px-3 py-1 text-sm font-medium text-white bg-gray-500 hover:bg-gray-600 rounded-md transition-colors" onClick={toggleCategory}>
                                 {showNewCategory ? "Select Existing" : "Add New Category"}
                             </button>
                         </div>
@@ -243,7 +243,7 @@ const UpdateProduct = () => {
                     <div className="mb-6 bg-gray-50 p-4 rounded-md border border-gray-100">
                         <div className="flex justify-between items-center mb-3">
                             <label htmlFor="sub_category_id" className="text-gray-700 font-medium text-lg">Subcategory</label>
-                            <button type="button" className={`px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors ${showNewCategory ? 'opacity-50 cursor-not-allowed' : ''}`} onClick={toggleSubcategory} disabled={showNewCategory}>
+                            <button type="button" className={`px-3 py-1 text-sm font-medium text-white bg-gray-500 hover:bg-gray-700 rounded-md transition-colors ${showNewCategory ? 'opacity-50 cursor-not-allowed' : ''}`} onClick={toggleSubcategory} disabled={showNewCategory}>
                                 {showNewSubcategory ? "Select Existing" : "Add New Subcategory"}
                             </button>
                         </div>
@@ -273,11 +273,11 @@ const UpdateProduct = () => {
                         {standardFields.map(renderField)}
                     </div>
                     <div className="pt-4 border-t">
-                        <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition duration-200 font-medium text-lg" disabled={loading}>
+                        <button type="submit" className="w-full bg-gray-700 text-white p-3 rounded-md hover:bg-gray-800 transition duration-200 font-medium text-lg" disabled={loading}>
                             {loading ? 'Updating Product...' : 'Update Product'}
                         </button>
                         <div className="mt-4 text-center">
-                            <button type="button" className="text-blue-600 hover:text-blue-800 font-medium" onClick={() => navigate('/dashboard/view-product')}>Back to Products</button>
+                            <button type="button" className="text-gray-700 hover:text-gray-800 font-medium" onClick={() => navigate('/dashboard/view-product')}>Back to Products</button>
                         </div>
                     </div>
                 </form>

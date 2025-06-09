@@ -192,8 +192,8 @@ const AddInventory = () => {
 
     return (
         <div className="max-w-2xl mx-auto bg-white shadow-xl text-[16px] rounded-lg m-6 overflow-hidden">
-            <div className="bg-gray-50 py-4 px-6 border-b">
-                <h2 className="text-2xl font-bold text-gray-800">Add Inventory</h2>
+            <div className="bg-gray-800 py-4 px-6 border-b">
+                <h2 className="text-2xl font-bold text-white">Add Inventory</h2>
             </div>
             
             <div className="p-6">
@@ -221,7 +221,7 @@ const AddInventory = () => {
                     <div className="mb-6 bg-gray-50 p-4 rounded-md border border-gray-100">
                         <div className="flex justify-between items-center mb-3">
                             <label htmlFor="category_id" className="text-gray-700 font-medium ">Category</label>
-                            <button type="button" className="px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors" onClick={toggleCategory}>
+                            <button type="button" className="px-3 py-1 text-sm font-medium text-white bg-gray-500 hover:bg-gray-600 rounded-md transition-colors" onClick={toggleCategory}>
                                 {showNewCategory ? "Select Existing" : "Add New Category"}
                             </button>
                         </div>
@@ -262,7 +262,7 @@ const AddInventory = () => {
                     <div className="mt-3">
                         <div className="flex justify-between items-center mb-3">
                             <label htmlFor="sub_category_id" className="text-gray-700 font-medium ">Subcategory</label>
-                            <button type="button" className="px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors" onClick={toggleSubcategory}>
+                            <button type="button" className="px-3 py-1 text-sm font-medium text-white bg-gray-500 hover:bg-gray-600 rounded-md transition-colors" onClick={toggleSubcategory}>
                                 {showNewSubcategory ? "Select Existing" : "Add New Subcategory"}
                             </button>
                         </div>
@@ -313,7 +313,7 @@ const AddInventory = () => {
                     <div className="pt-4 border-t">
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition duration-200 font-medium "
+                            className="w-full bg-gray-700 text-white p-3 rounded-md hover:bg-gray-800 transition duration-200 font-medium "
                             disabled={loading}
                         >
                             {loading ? 'Adding Inventory...' : 'Add Inventory'}
@@ -322,7 +322,7 @@ const AddInventory = () => {
                         <div className="mt-4 text-center">
                             <button 
                                 type="button" 
-                                className="text-blue-600 hover:text-blue-800 font-medium"
+                                className="text-gray-700 hover:text-gray-800 font-medium"
                                 onClick={() => navigate('/dashboard')}
                             >
                                 Back to Dashboard

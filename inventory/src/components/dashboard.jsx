@@ -24,11 +24,11 @@ const Dashboard = () => {
   }[userRole] || [];
 
   return (
-    <div className='flex h-screen bg-gradient-to-tr from-violet-900 to-violet-300'>
+    <div className='flex h-screen bg-gray-100'>
       <Sidebar roleButtons={roleButtons} /> 
-      <div className="flex-1 p-8 bg-gradient-to-tr from-violet-900 to-violet-300 overflow-y-auto">
-        <h1 className="text-2xl text-white font-bold mb-4">Welcome to Dashboard!</h1>
-        <p className="mb-6 text-white">Manage your products efficiently with the options on the left.</p>
+      <div className="flex-1 p-8 bg-gray-50 overflow-y-auto">
+        <h1 className="text-2xl text-black font-bold mb-4">Welcome to Dashboard!</h1>
+        <p className="mb-6 text-black">Manage your products efficiently with the options on the left.</p>
         <Outlet />
       </div>
     </div>

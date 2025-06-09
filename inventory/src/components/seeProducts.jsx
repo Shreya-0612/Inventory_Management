@@ -22,15 +22,15 @@ const ViewProduct = () => {
 
   return (
     <div className="max-w-5xl mx-auto m-10">
-      <div className="bg-slate-500 rounded-xl shadow-2xl overflow-hidden">
-        <div className="bg-gray-50 py-5 px-6 border-b flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-gray-800">Inventory Catalog</h2>
+      <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
+        <div className="bg-gray-800 py-5 px-6 border-b flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-white">Inventory Catalog</h2>
           <span className="bg-gray-600 text-white text-sm py-1 px-3 rounded-full">
             {inventories.length} Products
           </span>
           <button 
             onClick={toggleView} 
-            className="bg-gray-800 text-white rounded-lg p-2"
+            className="bg-gray-600 text-white rounded-lg p-2"
           >
             {isGridView ? "Switch to List View" : "Switch to Grid View"}
           </button>

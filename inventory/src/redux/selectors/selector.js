@@ -45,6 +45,12 @@ export const selectRoles = createSelector(
     (userState) => userState?.loginReducer?.roles || []
   );
 
+export const selectUsers = createSelector(
+    [selectUserState],
+    (userState) => userState?.loginReducer?.users || []
+  );
+
+
 export const selectInventoryState = (state) => {
   console.log("inventory state",state.inventoryReducer);
   return state.inventoryReducer};

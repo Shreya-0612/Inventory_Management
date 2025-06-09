@@ -4,7 +4,10 @@ import {
     ADD_USER_SUCCESS,
     FETCH_USER_ROLE_REQUEST,
     FETCH_USER_ROLE_FAILURE,
-    FETCH_USER_ROLE_SUCCESS } from "../actions/addUserAction";
+    FETCH_USER_ROLE_SUCCESS,
+    SHOW_USER_SUCCESS,
+    SHOW_USER_REQUEST,
+    SHOW_USER_FAILURE } from "../actions/addUserAction";
 import{
     INITIAL_AUTH, 
     LOGIN_FAILURE, 
@@ -18,7 +21,8 @@ const initialState ={
     error: null,
     message: null,
     user : null,
-    roles: []
+    roles: [],
+    users: []
 }
 
 const loginReducer = (state = initialState, action) => {
@@ -125,7 +129,35 @@ const loginReducer = (state = initialState, action) => {
                 message: null
             };
             break;
+        
+        case SHOW_USER_REQUEST:
+            newState = {
+                ...state,
+                loading: true,
+                error: null,
+                message: null
+            };
+            break;
 
+        case SHOW_USER_SUCCESS:
+            newState = {
+                ...state,
+                loading: false,
+                users: action.payload,
+                error: null,
+                message: action.payload.message
+            };
+            break;
+        
+        case SHOW_USER_FAILURE:
+            newState = {
+                ...state,
+                loading: false,
+                error: action.payload,
+                message: null
+            };
+            break;
+            
         default:
             newState = state; 
     }

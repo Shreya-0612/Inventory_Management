@@ -13,6 +13,7 @@ import DeleteInventory from './components/deleteInventory';
 import UpdateProduct from './components/updateProduct';
 import ManageInventory from './components/manageInventory';
 import EditOptions from './components/editInventoryOptions';
+import ShowUsers from './components/showUsers';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/dashboard/add-user" element={<AddUser  />} />
                     <Route path="/dashboard/add-inventory" element={<AddInventory />} />
                     <Route path="/dashboard/view-product" element={<ViewProduct />} />
+                    <Route path="/dashboard/show-users" element={<ShowUsers />} />
                     <Route path="/dashboard/inventoy-details/:sku" element={<InventoryDetails />} />
                     <Route path="/dashboard/view-product/edit-options/delete-inventory/:sku" element={<DeleteInventory />} />
                     <Route path="/dashboard/view-product/edit-options/update-product/:sku" element={<UpdateProduct />} />

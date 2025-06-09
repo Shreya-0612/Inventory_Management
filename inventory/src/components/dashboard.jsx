@@ -9,6 +9,7 @@ const Dashboard = () => {
       { to: "/dashboard/add-user", text: "Add User" },
       { to: "/dashboard/add-inventory", text: "Add Inventory" },
       { to: "/dashboard/view-product", text: "View Products" },
+      { to: "/dashboard/show-users", text: "Show Users" },
       ],
     inventory_manager: [
       { to: "/dashboard/add-inventory", text: "Add Inventory" },

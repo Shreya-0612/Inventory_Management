@@ -4,6 +4,9 @@ export const ADD_USER_FAILURE = "ADD_USER_FAILURE";
 export const FETCH_USER_ROLE_REQUEST = "FETCH_USER_ROLE_REQUEST";
 export const FETCH_USER_ROLE_SUCCESS = "FETCH_USER_ROLE_SUCCESS";
 export const FETCH_USER_ROLE_FAILURE = "FETCH_USER_ROLE_FAILURE";
+export const SHOW_USER_REQUEST = "SHOW_USER_REQUEST";
+export const SHOW_USER_SUCCESS = "SHOW_USER_SUCCESS";
+export const SHOW_USER_FAILURE = "SHOW_USER_FAILURE";
 import Swal from "sweetalert2";
 import API from "../../api";
 
@@ -57,3 +60,29 @@ export const fetchUserRoleAction = () => {
         }
     };
 };
+
+export const showUserAction = () =>{
+    return async (dispatch) =>{
+      dispatch({type: SHOW_USER_REQUEST});
+      try{
+        const response = await API.get("/getUsersList");
+        if(response.data && Array.isArray(response.data)){
+          dispatch({
+            type: SHOW_USER_SUCCESS,
+            payload: response.data
+          });
+
+        }
+        else{
+          throw new Error('Invalid data format');
+        }
+      }
+      catch(error){
+        console.error('Fetch Users Error:', error);
+        dispatch({
+          type: SHOW_USER_FAILURE,
+          payload: error.response?.data?.message 
+        });
+      }
+    }
+  }

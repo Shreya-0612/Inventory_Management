@@ -302,7 +302,7 @@ export const fetchCategories = () => {
             console.log("Error in updating inventory", error);
             dispatch({
                 type: UPDATE_INVENTORY_FAILURE,
-                payload: error.response?.data?.message || "Error in updating inventory"
+                payload: error.response?.data?.message 
             });
         };
       }

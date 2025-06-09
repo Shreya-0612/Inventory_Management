@@ -7,8 +7,8 @@ const EditOptions = () => {
     const userRole = localStorage.getItem("user_role") || "default";
 
     const roleButtonAccess = {
-        super_admin: ["update", "manage"],
-        inventory_manager: ["update","manage"],
+        super_admin: ["update", "manage", "delete"],
+        inventory_manager: ["update", "manage", "delete"],
         warehouse_staff: ["manage"],
         default: [],
     }[userRole] || [];
@@ -16,8 +16,13 @@ const EditOptions = () => {
     const handleUpdateProduct = () => {
         navigate(`/dashboard/view-product/edit-options/update-product/${sku}`);
     };
+
     const handleManageInventory = () => {
         navigate(`/dashboard/view-product/edit-options/manage-inventory/${sku}`);
+    };
+
+    const handleDeleteInventory = () => {
+        navigate(`/dashboard/view-product/edit-options/delete-inventory/${sku}`);
     };
 
     return (
@@ -38,6 +43,14 @@ const EditOptions = () => {
                         onClick={handleManageInventory}
                     >
                         Manage Inventory
+                    </button>
+                )}
+                {roleButtonAccess.includes("delete") && (
+                    <button 
+                        className="bg-gray-700 text-white rounded-lg p-2 font-bold"
+                        onClick={handleDeleteInventory}
+                    >
+                        Delete Inventory
                     </button>
                 )}
             </div>

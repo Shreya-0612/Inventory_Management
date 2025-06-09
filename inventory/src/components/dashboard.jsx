@@ -9,7 +9,6 @@ const Dashboard = () => {
       { to: "/dashboard/add-user", text: "Add User" },
       { to: "/dashboard/add-inventory", text: "Add Inventory" },
       { to: "/dashboard/view-product", text: "View Products" },
-      { to: "/dashboard/delete-inventory", text: "Delete Inventory"},
       ],
     inventory_manager: [
       { to: "/dashboard/add-inventory", text: "Add Inventory" },
@@ -18,7 +17,6 @@ const Dashboard = () => {
       ],
     warehouse_staff: [
       { to: "/dashboard/view-product", text: "View Inventory" },
-
     ],
     default: [],
   }[userRole] || [];

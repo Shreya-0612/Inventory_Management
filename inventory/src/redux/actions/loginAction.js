@@ -3,6 +3,7 @@ export const INITIAL_AUTH = "INITIAL_AUTH";
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILURE = "LOGIN_FAILURE";
+export const LOGOUT = "LOGOUT";
 
 
 export const loginAction = (credentials) => {
@@ -75,4 +76,24 @@ export const initializeAuth =()=>{
             });
         }
      }
+    }
+
+export const logoutAction = () =>{
+    return async (dispatch) => {
+        try {
+            localStorage.removeItem("token");
+            localStorage.removeItem("user_role");
+            dispatch({type: LOGOUT});
+        }
+        catch (error) {
+            console.error("Logout error: ", error);
+            dispatch({
+                type: LOGIN_FAILURE,
+                payload: {
+                    message: "Logout Failed",
+                    payload: error.response?.data?.message || "Failed to logout"
+                }
+            });
+        }
+    }
 }

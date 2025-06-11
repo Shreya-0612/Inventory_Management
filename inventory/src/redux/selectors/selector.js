@@ -18,7 +18,8 @@ return isLoading;
 export const selectIsAuthenticated = createSelector(
  [selectUserState],
  (userState) => {
-const isAuth = userState?.loginReducer?.isAuthenticated === true;
+  console.log(userState,"kjdfghkjdghfkjd")
+const isAuth = userState?.loginReducer?.isAuthenticated;
 console.log('Authentication Selector:', isAuth);
 // console.log(userState,"userStateuserState")
 return isAuth;

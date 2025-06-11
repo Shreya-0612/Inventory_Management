@@ -13,10 +13,11 @@ import{
     LOGIN_FAILURE, 
     LOGIN_SUCCESS, 
     LOGIN_REQUEST,
+    LOGOUT
 } from "../actions/loginAction";
 
-const initialState ={
-    isAuthenticated : false,
+const initialState = {
+    isAuthenticated : null,
     loading : false,
     error: null,
     message: null,
@@ -72,6 +73,19 @@ const loginReducer = (state = initialState, action) => {
                 message: null,
                 isAuthenticated: false,
                 user: null
+            };
+            break;
+
+        case LOGOUT: 
+            newState = {
+                ...state,
+                isAuthenticated: false,
+                loading: false,
+                error: null,
+                message: null,
+                user: null,
+                roles: [],
+                users: []
             };
             break;
 
